@@ -22,15 +22,12 @@ export const HomeCht = () => {
                         <Navbar className='shadow sticky-top' style={{ backgroundColor: '#6D62FF', margin: '-1.7vh' }} variant="dark">
                             <Container>
                                 <Navbar.Brand className='fs-3'>Wak Shaf</Navbar.Brand>
-
-                                {/* <label className='me-4'><i class="fa-solid fa-ellipsis-vertical fs-4"></i></label> */}
-
                                 <div>
                                     <div className="dropdown me-4">
                                         <div className="dropdown" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown">
                                             <i className="fa-solid fa-ellipsis-vertical fs-4"></i>
                                         </div>
-                                        <ul className="dropdown-menu" style={{ marginLeft: '-21vh' }} aria-labelledby="dropdownMenuButton1">
+                                        <ul className="dropdown-menu" style={{ marginLeft: '-19vh' }} aria-labelledby="dropdownMenuButton1">
                                             <li><a className="dropdown-item" href="#">Add Kontak</a></li>
                                             <li><a className="dropdown-item" href="#">Lihat Kontak</a></li>
                                             <li><a className="dropdown-item" href="#">Setting</a></li>
@@ -56,7 +53,7 @@ export const HomeCht = () => {
                                 </div>
                             ) : (
                                 <div className='mt-5 text-end me-4'>
-                                    <i class="fa-solid fa-magnifying-glass fs-2" onClick={() => search()}></i>
+                                    <i class="fa-solid fa-magnifying-glass fs-4" onClick={() => search()}></i>
                                 </div>
 
                             )
