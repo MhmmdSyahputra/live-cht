@@ -4,10 +4,10 @@ export const GET_ALL_MESSAGE = "GET_ALL_MESSAGE"
 export const GET_ALL_MESSAGE_IN = "GET_ALL_MESSAGE_IN"
 
 // local
-const url = "http://localhost:3000/"
+// const url = "http://localhost:3000/"
 
 // deploy
-// const url = "https://my-json-server.typicode.com/MhmmdSyahputra/live-cht/"
+const url = "https://my-json-server.typicode.com/MhmmdSyahputra/live-cht/"
 
 
 export const getAllMessage = () => {

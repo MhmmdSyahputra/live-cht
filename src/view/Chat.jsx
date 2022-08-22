@@ -34,7 +34,7 @@ export const PersonalChat = () => {
                         </Navbar>
 
                         <div className="row">
-                            <div className="col-md-13 scroll" style={{ height: '82vh', overflowY: 'scroll' }}>
+                            <div className="col-md-13 scroll" style={{ height: '80vh', overflowY: 'scroll' }}>
                                 <br />
                                 <SingleCht />
                             </div>
