@@ -7,7 +7,7 @@ const Pages = () => {
         <>
             <Routes>
                 <Route path='/' element={<HomeCht />} />
-                <Route path='/cht' element={<PersonalChat />} />
+                <Route path='/cht/:id' element={<PersonalChat />} />
             </Routes>
         </>
     )

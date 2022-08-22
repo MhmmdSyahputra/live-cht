@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux'
-import { getAllMessage } from '../../action/MessageAction';
+import { getAllMessage, getAllPesanIn } from '../../action/MessageAction';
 
 export const AllBubleCht = () => {
     let navigate = useNavigate();
@@ -17,8 +17,8 @@ export const AllBubleCht = () => {
 
     }, [dispatch])
 
-    const cht = () => {
-        navigate('/cht');
+    const cht = (id) => {
+        navigate(`/cht/${id}`);
     }
     return (
         <>
@@ -26,7 +26,7 @@ export const AllBubleCht = () => {
                 getAllMessageResult ? (
                     getAllMessageResult.map((allmessage) => {
                         return (
-                            <div className="row mt-3 mb-2" key={allmessage.id} onClick={() => cht()} style={{ cursor: 'pointer' }}>
+                            <div className="row mt-3 mb-2" key={allmessage.id} onClick={() => cht(allmessage.id)} style={{ cursor: 'pointer' }}>
                                 <div className="col">
                                     <div className="row">
                                         <div className="col-3" style={{ width: '100px' }}>
