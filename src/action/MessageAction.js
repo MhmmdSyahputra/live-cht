@@ -6,7 +6,7 @@ export const GET_ALL_MESSAGE = "GET_ALL_MESSAGE"
 // const url = "http://localhost:3000/"
 
 // deploy
-const url = "https://my-json-server.typicode.com/https: //github.com/MhmmdSyahputra/live-cht/"
+const url = "https://my-json-server.typicode.com/MhmmdSyahputra/live-cht/"
 
 
 export const getAllMessage = () => {
