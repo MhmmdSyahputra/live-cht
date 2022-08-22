@@ -1,0 +1,64 @@
+{
+   "room": [
+    {
+      "nama": "Info Loker",
+      "id": 1,
+      "allmessage": [
+          {
+            "nama":"Aceh",
+            "id": 1,
+            "pesan": "halo semua apa kabar",
+            "date": "22-08-2022"
+          },
+          {
+            "nama":"Usop",
+            "id": 2,
+            "pesan": "Apa ceh",
+            "date": "22-08-2022"
+          },
+          {
+            "nama":"Pane",
+            "id": 3,
+            "pesan": "Woi",
+            "date": "22-08-2022"
+          },
+          {
+            "nama":"Putra",
+            "id": 4,
+            "pesan": "Apa Cabs",
+            "date": "22-08-2022"
+          }
+      ]
+    },
+    {
+      "nama": "Anak IT",
+      "id": 2,
+      "allmessage": [
+          {
+            "nama":"jekson",
+            "id": 1,
+            "pesan": "halo guys",
+            "date": "22-08-2022"
+          },
+          {
+            "nama":"Usop",
+            "id":2,
+            "pesan": "info loker nya",
+            "date": "22-08-2022"
+          },
+          {
+            "nama":"putra",
+            "id": 3,
+            "pesan": "p",
+            "date": "22-08-2022"
+          },
+          {
+            "nama":"Pane",
+            "id": 4,
+            "pesan": "tutor",
+            "date": "22-08-2022"
+          }
+      ]
+    }
+  ] 
+}

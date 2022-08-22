@@ -23,10 +23,10 @@ export const PersonalChat = () => {
                                             <label><i class="fa-solid fa-caret-left fs-1"></i></label>
                                         </div>
                                         <div className="col-1 m-auto">
-                                            <img src="https://images.unsplash.com/photo-1611606063065-ee7946f0787a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8dXNlciUyMGljb258ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" className="rounded-circle border border-white bg-light  me-3" width='60' alt="" />
+                                            <img src="https://images.unsplash.com/photo-1637858868799-7f26a0640eb6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGNhcnRvb258ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" className="rounded-circle border border-white bg-light  me-3" width='60' alt="" />
                                         </div>
                                         <div className="col m-auto">
-                                            <label className='username'>Muhammad Syahputra</label>
+                                            <label className='username fs-5'>Muhammad Syahputra</label>
                                         </div>
                                     </div>
                                 </Navbar.Brand>

@@ -44,7 +44,7 @@ export const HomeCht = () => {
                                 <div className='mt-5'>
                                     <div className="row p-2 shadow  text-light">
                                         <div className="col-1 m-auto" style={{ paddingRight: '0px' }} onClick={() => search()}>
-                                            <label><i class="fa-solid fa-arrow-left fs-4"></i></label>
+                                            <label><i className="fa-solid fa-arrow-left fs-4"></i></label>
                                         </div>
                                         <div className="col">
                                             <input type="search" autoFocus className='form-control shadow-none text-light search' style={{ background: 'transparent', border: 'none' }} />
@@ -53,7 +53,7 @@ export const HomeCht = () => {
                                 </div>
                             ) : (
                                 <div className='mt-5 text-end me-4'>
-                                    <i class="fa-solid fa-magnifying-glass fs-4" onClick={() => search()}></i>
+                                    <i className="fa-solid fa-magnifying-glass fs-4" onClick={() => search()}></i>
                                 </div>
 
                             )
