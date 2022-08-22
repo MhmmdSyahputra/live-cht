@@ -3,7 +3,11 @@ import axios from "axios";
 export const GET_ALL_MESSAGE = "GET_ALL_MESSAGE"
 
 // local
-const url = "http://localhost:3000/"
+// const url = "http://localhost:3000/"
+
+// deploy
+const url = "https://my-json-server.typicode.com/https: //github.com/MhmmdSyahputra/live-cht/"
+
 
 export const getAllMessage = () => {
     // console.log("2. Masuk Action");
