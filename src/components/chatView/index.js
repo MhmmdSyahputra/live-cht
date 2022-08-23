@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom';
-import { getAllPesanIn } from '../../action/MessageAction';
+import { getAllPesanIn, getAllMessage } from '../../action/MessageAction';
 
 
 export const SingleCht = () => {
@@ -9,7 +9,14 @@ export const SingleCht = () => {
 
     const dispatch = useDispatch();
 
-    const { getAllMessageInResult, getAllMessageInLoading, getAllMessageInError } = useSelector((state) => state.MessageReducer)
+    const { getAllMessageInResult, sendMessageInResult, getAllMessageInLoading, getAllMessageInError } = useSelector((state) => state.MessageReducer)
+
+
+    useEffect(() => {
+        if (sendMessageInResult) {
+            dispatch(getAllMessage())
+        }
+    }, [sendMessageInResult, dispatch])
 
     useEffect(() => {
         const id = params.id
@@ -41,21 +48,6 @@ export const SingleCht = () => {
                             })
                         )
 
-                        // return (
-                        //     <div style={{ width: '70%' }} className='ms-auto'>
-                        //         <div className='bubble-chat bg-light m-2 p-3 text-start text-dark shadow cht-right'
-                        //             style={{ clear: 'both', float: 'right', }}>
-
-                        //             <h6 className='text-muted text-end'>{allPesanIn.nama}</h6>
-                        //             <div>
-                        //                 Hlo putra
-                        //             </div>
-                        //             <div className='text-muted mx-2 text-start'>
-                        //                 12-12-12
-                        //             </div>
-                        //         </div>
-                        //     </div>
-                        // )
                     })
                 ) : getAllMessageInLoading ? (
                     <p>Bentar Cok</p>
@@ -64,31 +56,7 @@ export const SingleCht = () => {
                 )
             }
 
-            {/* <div style={{ width: '70%' }} className='ms-auto'>
-                <div className='bubble-chat bg-light m-2 p-3 text-start text-dark shadow cht-right'
-                    style={{ clear: 'both', float: 'right', }}>
-                    <h6 className='text-muted text-end'>Anda</h6>
-                    <div>
-                        Hlo putra
-                    </div>
-                    <div className='text-muted mx-2 text-start'>
-                        12-12-12
-                    </div>
-                </div>
-            </div>
 
-            <div style={{ width: '70%' }} className=''>
-                <div className='bubble-chat bg-light m-2 p-3 text-start text-dark shadow cht-right'
-                    style={{ clear: 'both', float: 'left', }}>
-                    <h6 className='text-muted '>Ariandi</h6>
-                    <div>
-                        Hlo putra
-                    </div>
-                    <div className='text-muted mx-2 '>
-                        12-12-12
-                    </div>
-                </div>
-            </div> */}
         </>
     )
 }

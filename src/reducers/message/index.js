@@ -1,4 +1,4 @@
-import { GET_ALL_MESSAGE, GET_ALL_MESSAGE_IN } from "../../action/MessageAction"
+import { GET_ALL_MESSAGE, GET_ALL_MESSAGE_IN, ADD_MESSAGE_IN } from "../../action/MessageAction"
 
 const initialState = {
     getAllMessageResult: false,
@@ -8,6 +8,10 @@ const initialState = {
     getAllMessageInResult: false,
     getAllMessageInLoading: false,
     getAllMessageInError: false,
+
+    sendMessageInResult: false,
+    sendMessageInLoading: false,
+    sendMessageInError: false,
 
 }
 
@@ -28,6 +32,14 @@ const message = (state = initialState, action) => {
                 getAllMessageInResult: action.payload.data,
                 getAllMessageInLoading: action.payload.loading,
                 getAllMessageInError: action.payload.errormessage
+            }
+        case ADD_MESSAGE_IN:
+            // console.log("4. masuk reducer");
+            return {
+                ...state,
+                sendMessageInResult: action.payload.data,
+                sendMessageInLoading: action.payload.loading,
+                sendMessageInError: action.payload.errormessage
             }
 
         default:

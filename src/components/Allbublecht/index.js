@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux'
-import { getAllMessage, getAllPesanIn } from '../../action/MessageAction';
+import { getAllMessage } from '../../action/MessageAction';
 
 export const AllBubleCht = () => {
     let navigate = useNavigate();
@@ -30,7 +30,7 @@ export const AllBubleCht = () => {
                                 <div className="col">
                                     <div className="row">
                                         <div className="col-3" style={{ width: '100px' }}>
-                                            <img src="https://images.unsplash.com/photo-1637858868799-7f26a0640eb6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGNhcnRvb258ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" className="rounded-circle border border-white bg-light " width='80' alt="" />
+                                            <img src="https://images.unsplash.com/photo-1637858868799-7f26a0640eb6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGNhcnRvb258ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" className="rounded-circle border border-white bg-light " width='55' alt="" />
                                         </div>
                                         <div className="col m-auto text-start">
                                             <label className='username fw-bold'>{allmessage.nama}</label>
@@ -61,22 +61,6 @@ export const AllBubleCht = () => {
                     <p>{getAllMessageError ? getAllMessageError : "data kosong"}</p>
                 )
             }
-            <div className="row mt-3 mb-2" onClick={() => cht()} style={{ cursor: 'pointer' }}>
-                <div className="col">
-                    <div className="row">
-                        <div className="col-3" style={{ width: '100px' }}>
-                            <img src="https://images.unsplash.com/photo-1637858868799-7f26a0640eb6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGNhcnRvb258ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" className="rounded-circle border border-white bg-light " width='80' alt="" />
-                        </div>
-                        <div className="col m-auto text-start">
-                            <label className='username fw-bold'>Mikroskil</label>
-                            <div className='message'>
-                                Congratsss anda mendapatkan beasiswa sampai S2
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
 
         </>
     )
