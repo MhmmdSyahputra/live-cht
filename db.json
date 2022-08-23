@@ -5,118 +5,34 @@
       "id": 1,
       "allmessage": [
         {
-          "nama": "Aceh",
-          "id": 1,
-          "pesan": "halo semua apa kabar",
-          "date": "22-08-2022"
-        },
-        {
-          "nama": "Usop",
-          "id": 2,
-          "pesan": "Apa ceh",
-          "date": "22-08-2022"
-        },
-        {
-          "nama": "Pane",
-          "id": 3,
-          "pesan": "Woi",
-          "date": "22-08-2022"
-        },
-        {
-          "nama": "Putra",
-          "id": 4,
-          "pesan": "Apa Cabs",
-          "date": "22-08-2022"
-        },
-        {
-          "nama": "Putra",
-          "id": 5,
-          "pesan": "Apa Cabs",
-          "date": "22-08-2022"
-        },
-        {
-          "nama": "Putra",
-          "id": 6,
-          "pesan": "Apa Cabs",
-          "date": "22-08-2022"
-        },
-        {
-          "uid": "p-cY3uhD_YxFeQ2uYmwgy",
+          "uid": "TFvFQw9kBuTInvOrZhD0i",
           "nama": "Anonymous",
-          "pesan": "bisa"
+          "pesan": "halo guys",
+          "time": "01:46"
         },
         {
-          "uid": "-iY7sGXC5Am7Lx65rR1mR",
+          "uid": "soL-MtBAC9zCTV_Dfi3YP",
           "nama": "Anonymous",
-          "pesan": "halo"
+          "pesan": "cek cek",
+          "time": "01:48"
         },
         {
-          "uid": "-iY7sGXC5Am7Lx65rR1mR",
+          "uid": "RsCpSRI9XS2ur-tvn8Ye9",
           "nama": "Anonymous",
-          "pesan": "halo"
+          "pesan": "tes",
+          "time": "01:56"
         },
         {
-          "uid": "-iY7sGXC5Am7Lx65rR1mR",
+          "uid": "RsCpSRI9XS2ur-tvn8Ye9",
           "nama": "Anonymous",
-          "pesan": "tes"
+          "pesan": "halo",
+          "time": "01:56"
         },
         {
-          "uid": "NtWo43-mgtksDgpFxgaxy",
-          "nama": "",
-          "pesan": "halohalo"
-        },
-        {
-          "uid": "YmE9326IIAOp77WroSkOE",
+          "uid": "RsCpSRI9XS2ur-tvn8Ye9",
           "nama": "Anonymous",
-          "pesan": "wewef"
-        },
-        {
-          "uid": "YmE9326IIAOp77WroSkOE",
-          "nama": "",
-          "pesan": "32d32"
-        }
-      ],
-      "allMessage": [
-        {
-          "nama": "Aceh",
-          "id": 1,
-          "pesan": "halo semua apa kabar",
-          "date": "22-08-2022"
-        },
-        {
-          "nama": "Usop",
-          "id": 2,
-          "pesan": "Apa ceh",
-          "date": "22-08-2022"
-        },
-        {
-          "nama": "Pane",
-          "id": 3,
-          "pesan": "Woi",
-          "date": "22-08-2022"
-        },
-        {
-          "nama": "Putra",
-          "id": 4,
-          "pesan": "Apa Cabs",
-          "date": "22-08-2022"
-        },
-        {
-          "nama": "Putra",
-          "id": 5,
-          "pesan": "Apa Cabs",
-          "date": "22-08-2022"
-        },
-        {
-          "nama": "Putra",
-          "id": 6,
-          "pesan": "Apa Cabs",
-          "date": "22-08-2022"
-        },
-        {
-          "uid": "zwLeN_0CnXldOAbpDtD2e",
-          "nama": "Anonymous",
-          "pesan": "tetstete"
+          "pesan": "p",
+          "time": "01:59"
         }
       ]
     },
@@ -125,43 +41,10 @@
       "id": 2,
       "allmessage": [
         {
-          "nama": "jekson",
-          "id": 1,
-          "pesan": "halo guys",
-          "date": "22-08-2022"
-        },
-        {
-          "nama": "Usop",
-          "id": 2,
-          "pesan": "info loker nya",
-          "date": "22-08-2022"
-        },
-        {
-          "nama": "putra",
-          "id": 3,
-          "pesan": "p",
-          "date": "22-08-2022"
-        },
-        {
-          "nama": "Pane",
-          "id": 4,
-          "pesan": "tutor",
-          "date": "22-08-2022"
-        },
-        {
-          "uid": "FCZPopmqaVvBkB-BjB5C4",
+          "uid": "RsCpSRI9XS2ur-tvn8Ye9",
           "nama": "Anonymous",
-          "pesan": "w"
-        },
-        {
-          "uid": "FCZPopmqaVvBkB-BjB5C4",
-          "nama": "",
-          "pesan": "2e"
-        },
-        {
-          "uid": "e2M_RyoCt6kSkspGYD-eM",
-          "nama": "Anonymous",
-          "pesan": "z"
+          "pesan": "cek",
+          "time": "02:00"
         }
       ]
     },
@@ -170,21 +53,10 @@
       "id": 3,
       "allmessage": [
         {
-          "nama": "lorem",
-          "id": 1,
-          "pesan": "ipsum",
-          "date": "22-08-2022"
-        },
-        {
-          "nama": "putra",
-          "id": 2,
-          "pesan": "putra",
-          "date": "22-08-2022"
-        },
-        {
-          "uid": "0QYqnJo1kVFgc8IveFteQ",
+          "uid": "RsCpSRI9XS2ur-tvn8Ye9",
           "nama": "Anonymous",
-          "pesan": "halo"
+          "pesan": "intro",
+          "time": "02:01"
         }
       ]
     }

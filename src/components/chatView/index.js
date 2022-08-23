@@ -30,16 +30,16 @@ export const SingleCht = () => {
                         return (
                             allPesanIn.allmessage.map((allPesanIn2, index) => {
                                 return (
-                                    <div style={{ width: '70%' }} className='ms-auto' key={index}>
+                                    <div style={{ width: '70%' }} className={allPesanIn2.uid == localStorage.getItem("uid") ? 'ms-auto' : ''} key={index}>
                                         <div className='bubble-chat bg-light m-2 p-3 text-start text-dark shadow cht-right'
-                                            style={{ clear: 'both', float: 'right', }}>
+                                            style={{ clear: 'both', float: allPesanIn2.uid == localStorage.getItem("uid") ? 'right' : 'left', }}>
 
                                             <h6 className='text-muted text-end'>{allPesanIn2.nama}</h6>
                                             <div>
                                                 {allPesanIn2.pesan}
                                             </div>
                                             <div className='text-muted mx-2 text-start'>
-                                                12-12-12
+                                                {allPesanIn2.time}
                                             </div>
                                         </div>
                                     </div>

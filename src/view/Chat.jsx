@@ -14,9 +14,16 @@ export const PersonalChat = () => {
     let navigate = useNavigate();
     const dispatch = useDispatch();
 
-    const [uid, setUid] = useState(nanoid())
+    // jika uid sudah ada di local storage maka pakai uid itu jika belum ada maka create new uid
+    const [uid, setUid] = useState(localStorage.getItem("uid") !== null ? localStorage.getItem("uid") : nanoid())
+
     const [nama, setNama] = useState("Anonymous")
     const [pesan, setPesan] = useState("")
+
+    const now = new Date()
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const time = hours + ":" + minutes
 
     const { sendMessageInResult } = useSelector((state) => state.MessageReducer)
 
@@ -26,7 +33,11 @@ export const PersonalChat = () => {
 
     const sendmessage = (e) => {
         e.preventDefault();
-        dispatch(sendMessage({ uid: uid, nama: nama, pesan: pesan }))
+        // jika localStorage uid masih kosong maka masukkan new id kelocalstorage
+        if (localStorage.getItem("uid") == null) {
+            localStorage.setItem("uid", uid);
+        }
+        dispatch(sendMessage({ uid: uid, nama: nama, pesan: pesan, time: time }))
     }
     useEffect(() => {
         if (sendMessageInResult) {
