@@ -15,13 +15,20 @@ export const SingleCht = () => {
     useEffect(() => {
         if (sendMessageInResult) {
             dispatch(getAllMessage())
+
         }
     }, [sendMessageInResult, dispatch])
+
+    // useEffect(() => {
+    //     const id = params.id
+    //     dispatch(getAllPesanIn(id)).scrollIntoView({ behavior: "smooth" })
+    // }, [])
 
     useEffect(() => {
         const id = params.id
         dispatch(getAllPesanIn(id))
     }, [])
+
     return (
         <>
             {
@@ -30,17 +37,22 @@ export const SingleCht = () => {
                         return (
                             allPesanIn.allmessage.map((allPesanIn2, index) => {
                                 return (
-                                    <div style={{ width: '70%' }} className={allPesanIn2.uid == localStorage.getItem("uid") ? 'ms-auto' : ''} key={index}>
+                                    <div style={{ width: '70%' }} className={allPesanIn2.uid === localStorage.getItem("uid") ? 'ms-auto' : ''} key={index}>
                                         <div className='bubble-chat bg-light m-2 p-3 text-start text-dark shadow cht-right'
-                                            style={{ clear: 'both', float: allPesanIn2.uid == localStorage.getItem("uid") ? 'right' : 'left', }}>
+                                            style={{ clear: 'both', float: allPesanIn2.uid === localStorage.getItem("uid") ? 'right' : 'left', borderRadius: '20px' }}>
 
-                                            <h6 className='text-muted text-end'>{allPesanIn2.nama}</h6>
+                                            <h6 className={'text-muted ' + (allPesanIn2.uid === localStorage.getItem("uid") ? 'text-end' : 'text-start')}>
+                                                {allPesanIn2.nama}
+                                            </h6>
                                             <div>
                                                 {allPesanIn2.pesan}
                                             </div>
                                             <div className='text-muted mx-2 text-start'>
                                                 {allPesanIn2.time}
                                             </div>
+                                        </div>
+                                        <div style={{ float: "left", clear: "both" }}
+                                            ref={(el) => { allPesanIn2 = el; }}>
                                         </div>
                                     </div>
 

@@ -39,7 +39,38 @@ export const AllBubleCht = () => {
                                                 allmessage.allmessage
                                                     .map((allmessage2, index) => (
                                                         <div className='message' key={index}>
-                                                            {allmessage2.pesan}
+                                                            {/* {
+                                                                allmessage2.uid === localStorage.getItem("uid") ? (
+                                                                    allmessage2.pesan.length > 20 ? (
+                                                                        <div>
+                                                                            <i class="fa-solid fa-check"></i>
+                                                                            {allmessage2.pesan.slice(0, 25)}
+                                                                        </div>
+                                                                    ) : allmessage2.pesan
+
+                                                                ) : allmessage2.pesan
+                                                            } */}
+                                                            {
+                                                                //cek panjang pesan > 20 maka
+                                                                allmessage2.pesan.length > 20 ? (
+                                                                    //cek apakah ini pesan saya atau bukan
+                                                                    allmessage2.uid === localStorage.getItem("uid") ? (
+                                                                        <div>
+                                                                            <i class="fa-solid fa-check me-2"></i>
+                                                                            {allmessage2.pesan.slice(0, 25) + '. . .'}
+                                                                        </div>
+                                                                        //jika bukan maka tanpa ceklis
+                                                                    ) : (allmessage2.pesan.slice(0, 25) + '. . .')
+                                                                    //else panjang < 20
+                                                                    //cek lagi apakah ini pesan saya atau bukan
+                                                                ) : allmessage2.uid === localStorage.getItem("uid") ? (
+                                                                    <div>
+                                                                        <i class="fa-solid fa-check me-2"></i>
+                                                                        {allmessage2.pesan}
+                                                                    </div>
+                                                                    //jika bukan maka tanpa ceklis
+                                                                ) : (allmessage2.pesan)
+                                                            }
                                                         </div>
                                                         // console.log(allmessage2.Aceh.pesan)
 
