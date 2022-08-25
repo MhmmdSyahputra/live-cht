@@ -19,6 +19,13 @@ export const SingleCht = () => {
         }
     }, [sendMessageInResult, dispatch])
 
+    useEffect(() => {
+        if (getAllMessageInResult) {
+            dispatch(getAllMessage())
+
+        }
+    }, [getAllMessageInResult, dispatch])
+
     // useEffect(() => {
     //     const id = params.id
     //     dispatch(getAllPesanIn(id)).scrollIntoView({ behavior: "smooth" })

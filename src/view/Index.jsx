@@ -2,9 +2,41 @@ import React, { useState } from 'react'
 import { AllBubleCht } from '../components';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
+import 'react-phone-number-input/style.css'
+import PhoneInput from 'react-phone-number-input'
+import axios from 'axios';
+import { auth } from '../config/index'
+
+import { isValidPhoneNumber } from 'react-phone-number-input'
+
 
 export const HomeCht = () => {
     const [searchinput, setSearchinput] = useState(false)
+    // const [value, setValue] = useState("")
+
+    // const apiUrl = `https://phonevalidation.abstractapi.com/v1/?api_key=20f27937a23b4a16b72b8eca19122b95&phone=${value}`;
+    // console.log(value);
+
+    // async function validatePhoneNumberViaAPI(phoneNumber) {
+    //     try {
+    //         const response = await axios.get(apiUrl, { phone: phoneNumber });
+    //         return response.data.valid
+    //     } catch (error) {
+    //         throw new Error('Caught in validatePhoneNumber: ', error)
+    //     }
+    // }
+
+    // const handle = async (e) => {
+    //     e.preventDefault()
+    //     const isValid = await validatePhoneNumberViaAPI(value);
+    //     if (isValid) {
+    //         console.log('valid');
+    //     } else {
+    //         console.log('no valid');
+    //     }
+
+    // }
+
 
     const search = () => {
         if (searchinput) {
@@ -22,6 +54,7 @@ export const HomeCht = () => {
                         <Navbar className='shadow sticky-top' style={{ backgroundColor: '#6D62FF', margin: '-1.7vh' }} variant="dark">
                             <Container>
                                 <Navbar.Brand className='fs-3'>Wak Shaf</Navbar.Brand>
+                                <button className="button signout" onClick={() => auth.signOut()}>Sign out</button>
                                 <div>
                                     <div className="dropdown me-4">
                                         <div className="dropdown" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown">
@@ -39,6 +72,8 @@ export const HomeCht = () => {
 
                             </Container>
                         </Navbar>
+
+
                         {
                             searchinput ? (
                                 <div className='mt-5'>
@@ -59,9 +94,17 @@ export const HomeCht = () => {
                             )
                         }
 
-                        <div>
-
-                        </div>
+                        {/* <div>
+                            <form onSubmit={(e) => handle(e)}>
+                                <PhoneInput
+                                    defaultCountry="ID"
+                                    international
+                                    placeholder="Enter phone number"
+                                    value={value}
+                                    onChange={setValue}
+                                />
+                            </form>
+                        </div> */}
 
                         <AllBubleCht />
                     </div>
