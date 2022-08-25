@@ -6,6 +6,7 @@ import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
 import axios from 'axios';
 import { auth } from '../config/index'
+import { useNavigate } from "react-router-dom";
 
 import { isValidPhoneNumber } from 'react-phone-number-input'
 
@@ -44,8 +45,13 @@ export const HomeCht = () => {
         } else {
             setSearchinput(true)
         }
-
     }
+    let navigate = useNavigate();
+    const logout = () => {
+        auth.signOut()
+        navigate('/Login');
+    }
+
     return (
         <>
             <div className="container">
@@ -54,7 +60,7 @@ export const HomeCht = () => {
                         <Navbar className='shadow sticky-top' style={{ backgroundColor: '#6D62FF', margin: '-1.7vh' }} variant="dark">
                             <Container>
                                 <Navbar.Brand className='fs-3'>Wak Shaf</Navbar.Brand>
-                                <button className="button signout" onClick={() => auth.signOut()}>Sign out</button>
+
                                 <div>
                                     <div className="dropdown me-4">
                                         <div className="dropdown" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown">
@@ -64,6 +70,7 @@ export const HomeCht = () => {
                                             <li><a className="dropdown-item" href="#">Add Kontak</a></li>
                                             <li><a className="dropdown-item" href="#">Lihat Kontak</a></li>
                                             <li><a className="dropdown-item" href="#">Setting</a></li>
+                                            <li><button className="dropdown-item" onClick={() => logout()}>Logout</button></li>
                                         </ul>
                                     </div>
 
