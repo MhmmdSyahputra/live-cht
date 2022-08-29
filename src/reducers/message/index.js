@@ -1,4 +1,10 @@
-import { GET_ALL_MESSAGE, GET_ALL_MESSAGE_IN, ADD_MESSAGE_IN } from "../../action/MessageAction"
+import {
+    GET_ALL_MESSAGE,
+    GET_ALL_MESSAGE_IN,
+    ADD_MESSAGE_IN,
+    ADD_USER,
+    GET_USER
+} from "../../action/MessageAction"
 
 const initialState = {
     getAllMessageResult: false,
@@ -12,6 +18,14 @@ const initialState = {
     sendMessageInResult: false,
     sendMessageInLoading: false,
     sendMessageInError: false,
+
+    addUserResult: false,
+    addUserLoading: false,
+    addUserError: false,
+
+    getUserResult: false,
+    getUserLoading: false,
+    getUserError: false,
 
 }
 
@@ -40,6 +54,22 @@ const message = (state = initialState, action) => {
                 sendMessageInResult: action.payload.data,
                 sendMessageInLoading: action.payload.loading,
                 sendMessageInError: action.payload.errormessage
+            }
+        case ADD_USER:
+            // console.log("4. masuk reducer");
+            return {
+                ...state,
+                addUserResult: action.payload.data,
+                addUserLoading: action.payload.loading,
+                addUserError: action.payload.errormessage
+            }
+        case GET_USER:
+            console.log("4. masuk reducer");
+            return {
+                ...state,
+                getUserResult: action.payload.data,
+                getUserLoading: action.payload.loading,
+                getUserError: action.payload.errormessage
             }
 
         default:

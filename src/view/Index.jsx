@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { AllBubleCht } from '../components';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
@@ -13,30 +13,13 @@ import { isValidPhoneNumber } from 'react-phone-number-input'
 
 export const HomeCht = () => {
     const [searchinput, setSearchinput] = useState(false)
-    // const [value, setValue] = useState("")
 
-    // const apiUrl = `https://phonevalidation.abstractapi.com/v1/?api_key=20f27937a23b4a16b72b8eca19122b95&phone=${value}`;
-    // console.log(value);
+    useEffect(() => {
+        if (localStorage.getItem("uidl") === null) {
+            navigate('/Login');
+        }
 
-    // async function validatePhoneNumberViaAPI(phoneNumber) {
-    //     try {
-    //         const response = await axios.get(apiUrl, { phone: phoneNumber });
-    //         return response.data.valid
-    //     } catch (error) {
-    //         throw new Error('Caught in validatePhoneNumber: ', error)
-    //     }
-    // }
-
-    // const handle = async (e) => {
-    //     e.preventDefault()
-    //     const isValid = await validatePhoneNumberViaAPI(value);
-    //     if (isValid) {
-    //         console.log('valid');
-    //     } else {
-    //         console.log('no valid');
-    //     }
-
-    // }
+    }, [])
 
 
     const search = () => {
@@ -48,12 +31,16 @@ export const HomeCht = () => {
     }
     let navigate = useNavigate();
     const logout = () => {
-        auth.signOut()
-        navigate('/Login');
+        auth.signOut().then(() => {
+            localStorage.removeItem("uidl")
+            navigate('/Login');
+        })
+
     }
 
     return (
         <>
+
             <div className="container">
                 <div className="row d-flex justify-content-center">
                     <div className="col-md-7 bg-dark text-light scroll" style={{ height: '100vh', overflowY: 'scroll' }}>
@@ -63,15 +50,15 @@ export const HomeCht = () => {
 
                                 <div>
                                     <div className="dropdown me-4">
-                                        <div className="dropdown" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown">
+                                        {/* <div className="dropdown" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown">
                                             <i className="fa-solid fa-ellipsis-vertical fs-4"></i>
                                         </div>
-                                        <ul className="dropdown-menu" style={{ marginLeft: '-19vh' }} aria-labelledby="dropdownMenuButton1">
-                                            <li><a className="dropdown-item" href="#">Add Kontak</a></li>
-                                            <li><a className="dropdown-item" href="#">Lihat Kontak</a></li>
-                                            <li><a className="dropdown-item" href="#">Setting</a></li>
-                                            <li><button className="dropdown-item" onClick={() => logout()}>Logout</button></li>
-                                        </ul>
+                                        <ul className="dropdown-menu" style={{ marginLeft: '-19vh' }} aria-labelledby="dropdownMenuButton1"> */}
+                                        <li><a className="dropdown-item" href="#">Add Kontak</a></li>
+                                        <li><a className="dropdown-item" href="#">Lihat Kontak</a></li>
+                                        <li><a className="dropdown-item" href="#">Setting</a></li>
+                                        <li><button className="dropdown-item" onClick={() => logout()}>Logout</button></li>
+                                        {/* </ul> */}
                                     </div>
 
                                 </div>

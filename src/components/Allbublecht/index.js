@@ -56,7 +56,7 @@ export const AllBubleCht = () => {
                                                                     //cek apakah ini pesan saya atau bukan
                                                                     allmessage2.uid === localStorage.getItem("uid") ? (
                                                                         <div>
-                                                                            <i class="fa-solid fa-check me-2"></i>
+                                                                            <i className="fa-solid fa-check me-2"></i>
                                                                             {allmessage2.pesan.slice(0, 25) + '. . .'}
                                                                         </div>
                                                                         //jika bukan maka tanpa ceklis
@@ -65,7 +65,7 @@ export const AllBubleCht = () => {
                                                                     //cek lagi apakah ini pesan saya atau bukan
                                                                 ) : allmessage2.uid === localStorage.getItem("uid") ? (
                                                                     <div>
-                                                                        <i class="fa-solid fa-check me-2"></i>
+                                                                        <i className="fa-solid fa-check me-2"></i>
                                                                         {allmessage2.pesan}
                                                                     </div>
                                                                     //jika bukan maka tanpa ceklis
