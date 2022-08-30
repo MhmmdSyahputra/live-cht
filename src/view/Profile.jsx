@@ -39,9 +39,9 @@ export const Profile = () => {
                                                 <div className="col-1" >
                                                     <i className="fa-solid fa-user fs-2"></i>
                                                 </div>
-                                                <div className="col-md-8">
+                                                <div className="col">
                                                     <div className='text-muted fs-5'>Nama</div>
-                                                    <div className="col text-start fs-4">{data.name}</div>
+                                                    <div className="col text-start fs-5">{data.name}</div>
                                                 </div>
                                             </div>
 
@@ -49,9 +49,9 @@ export const Profile = () => {
                                                 <div className="col-1">
                                                     <i className="fa-solid fa-hashtag fs-2"></i>
                                                 </div>
-                                                <div className="col-md-8">
+                                                <div className="col">
                                                     <div className='text-muted fs-5'>Pin</div>
-                                                    <div className="col text-start fs-4">{data.uid}</div>
+                                                    <div className="col text-start fs-5">{data.uid}</div>
                                                 </div>
                                             </div>
                                         </div>

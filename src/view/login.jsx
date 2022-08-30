@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux'
 import { addUser, getUser } from "../action/MessageAction";
 import axios from 'axios';
-import { store } from "../index";
+
 
 export const Login = () => {
     const [users, setUsers] = useState("");
@@ -29,7 +29,7 @@ export const Login = () => {
             axios.get('http://localhost:3000/user?uid=' + user.uid)
                 .then(function (response) {
                     if (response.data.length == 1) {
-                        console.log('login');
+                        sessionStorage.setItem("uidl", user.uid);
                     } else {
                         dispatch(addUser({ uid: user.uid, name: user.displayName, email: user.email, photo: user.photoURL }))
                     }

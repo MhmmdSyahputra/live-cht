@@ -2,7 +2,8 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom';
 import { getAllPesanIn, getAllMessage } from '../../action/MessageAction';
-
+import Box from '@mui/material/Box';
+import Skeleton from '@mui/material/Skeleton';
 
 export const SingleCht = () => {
     const params = useParams();
@@ -69,7 +70,14 @@ export const SingleCht = () => {
 
                     })
                 ) : getAllMessageInLoading ? (
-                    <p>Bentar Cok</p>
+                    <div>
+                        <Skeleton animation="wave" className='ms-auto' style={{ width: '70%', height: '18vh' }} />
+                        <Skeleton animation="wave" className='' style={{ width: '60%', height: '15vh' }} />
+                        <Skeleton animation="wave" className='ms-auto' style={{ width: '30%', height: '15vh' }} />
+                        <Skeleton animation="wave" className='ms-auto' style={{ width: '50%', height: '15vh' }} />
+                        <Skeleton animation="wave" className='' style={{ width: '50%', height: '15vh' }} />
+                    </div>
+
                 ) : (
                     <p>{getAllMessageInError ? getAllMessageInError : "data kosong"}</p>
                 )

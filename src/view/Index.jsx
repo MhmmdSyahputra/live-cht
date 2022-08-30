@@ -11,6 +11,7 @@ import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import Divider from '@mui/material/Divider';
 
 
 export const HomeCht = () => {
@@ -66,8 +67,8 @@ export const HomeCht = () => {
                                                 <i className="fa-solid fa-ellipsis-vertical fs-4 text-light"></i>
                                             </Button>
                                             <Menu
-                                                style={{ marginLeft: '-8.6vh', marginTop: '-6.6vh' }}
-
+                                                transformOrigin={{ horizontal: 'right', vertical: 'top' }}
+                                                anchorOrigin={{ horizontal: 'right', vertical: 'top' }}
                                                 id="basic-menu"
                                                 anchorEl={anchorEl}
                                                 open={open}
@@ -76,11 +77,17 @@ export const HomeCht = () => {
                                                     'aria-labelledby': 'basic-button',
                                                 }}
                                             >
-                                                <MenuItem className='p-3 pe-5' onClick={handleClose}>Add Kontak</MenuItem>
-                                                <MenuItem className='p-3 pe-5' onClick={handleClose}>Lihat Kontak</MenuItem>
+                                                <MenuItem className='p-3 pe-5' onClick={handleClose}>
+                                                    Add Kontak
+                                                </MenuItem>
+                                                <MenuItem className='p-3 pe-5' onClick={handleClose}>
+                                                    Lihat Kontak
+                                                </MenuItem>
+
                                                 <MenuItem className='p-3 pe-5' onClick={handleClose}>
                                                     <Link to='/profile' className='text-decoration-none text-dark'>Setelan</Link>
                                                 </MenuItem>
+                                                <Divider />
                                                 <MenuItem onClick={() => logout()}>Logout</MenuItem>
                                             </Menu>
                                         </div>

@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux'
 import { getAllMessage } from '../../action/MessageAction';
+import Box from '@mui/material/Box';
+import Skeleton from '@mui/material/Skeleton';
 
 export const AllBubleCht = () => {
     let navigate = useNavigate();
@@ -87,7 +89,47 @@ export const AllBubleCht = () => {
 
                     })
                 ) : getAllMessageLoading ? (
-                    <p>loading...</p>
+                    <div>
+                        <Box style={{ width: '100%' }} >
+                            <div className="row mb-3">
+                                <div className="col-1 me-3"><Skeleton animation="wave" variant="circular" width={40} height={40} /></div>
+                                <div className="col">
+                                    <Skeleton width={70} />
+                                    <Skeleton animation="wave" />
+                                </div>
+                            </div>
+                        </Box>
+                        <Box style={{ width: '100%' }} >
+                            <div className="row mb-3">
+                                <div className="col-1 me-3"><Skeleton animation="wave" variant="circular" width={40} height={40} /></div>
+                                <div className="col">
+                                    <Skeleton width={70} />
+                                    <Skeleton animation="wave" />
+                                </div>
+                            </div>
+                        </Box>
+                        <Box style={{ width: '100%' }} >
+                            <div className="row mb-3">
+                                <div className="col-1 me-3"><Skeleton animation="wave" variant="circular" width={40} height={40} /></div>
+                                <div className="col">
+                                    <Skeleton width={70} />
+                                    <Skeleton animation="wave" />
+                                </div>
+                            </div>
+                        </Box>
+                        <Box style={{ width: '100%' }} >
+                            <div className="row mb-3">
+                                <div className="col-1 me-3">
+                                    <Skeleton animation="wave" variant="circular" width={40} height={40} />
+                                </div>
+                                <div className="col">
+                                    <Skeleton width={70} />
+                                    <Skeleton animation="wave" />
+                                </div>
+                            </div>
+                        </Box>
+                    </div>
+
                 ) : (
                     <p>{getAllMessageError ? getAllMessageError : "data kosong"}</p>
                 )
