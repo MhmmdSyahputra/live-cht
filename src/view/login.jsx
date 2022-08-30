@@ -31,8 +31,9 @@ export const Login = () => {
                     if (response.data.length == 1) {
                         console.log('login');
                     } else {
-                        dispatch(addUser({ uid: user.uid }))
+                        dispatch(addUser({ uid: user.uid, name: user.displayName, email: user.email, photo: user.photoURL }))
                     }
+                    dispatch(getUser(user.uid))
                     // handle success
                     console.log(response.data.length);
                 })

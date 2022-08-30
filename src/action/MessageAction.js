@@ -1,7 +1,5 @@
 import axios from "axios";
-import {
-    store
-} from '../index'
+import { store } from '../index'
 
 export const GET_ALL_MESSAGE = "GET_ALL_MESSAGE"
 export const GET_ALL_MESSAGE_IN = "GET_ALL_MESSAGE_IN"
@@ -29,11 +27,11 @@ export const addUser = (data) => {
         })
         //get api
         axios({
-                method: 'POST',
-                url: url + 'user/',
-                timeout: 120000,
-                data: data
-            })
+            method: 'POST',
+            url: url + 'user/',
+            timeout: 120000,
+            data: data
+        })
             .then((response) => {
                 // console.log("3. berhasil dapet data", response.data);
                 //berhasil get api
@@ -77,10 +75,10 @@ export const getUser = (uid) => {
 
         //get api
         axios({
-                method: 'GET',
-                url: url + 'user?uid=' + uid,
-                timeout: 120000
-            })
+            method: 'GET',
+            url: url + 'user?uid=' + uid,
+            timeout: 120000
+        })
             .then((response) => {
                 console.log("3. berhasil dapet data", response.data);
                 //berhasil get api
@@ -125,10 +123,10 @@ export const getAllMessage = () => {
 
         //get api
         axios({
-                method: 'GET',
-                url: url + 'room',
-                timeout: 120000
-            })
+            method: 'GET',
+            url: url + 'room',
+            timeout: 120000
+        })
             .then((response) => {
                 // console.log("3. berhasil dapet data", response.data);
                 //berhasil get api
@@ -172,10 +170,10 @@ export const getAllPesanIn = (id) => {
 
         //get api
         axios({
-                method: 'GET',
-                url: url + 'room?id=' + id,
-                timeout: 120000
-            })
+            method: 'GET',
+            url: url + 'room?id=' + id,
+            timeout: 120000
+        })
             .then((response) => {
                 // console.log("3. berhasil dapet data", response.data);
                 //berhasil get api
@@ -222,13 +220,13 @@ export const sendMessage = (data) => {
         prveMessage.push(data)
         //get api
         axios({
-                method: 'PATCH',
-                url: url + 'room/' + idroom,
-                timeout: 120000,
-                data: {
-                    allmessage: prveMessage
-                }
-            })
+            method: 'PATCH',
+            url: url + 'room/' + idroom,
+            timeout: 120000,
+            data: {
+                allmessage: prveMessage
+            }
+        })
             .then((response) => {
                 // console.log("3. berhasil dapet data", response.data);
                 //berhasil get api
