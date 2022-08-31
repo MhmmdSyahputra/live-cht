@@ -3,7 +3,8 @@ import {
     GET_ALL_MESSAGE_IN,
     ADD_MESSAGE_IN,
     ADD_USER,
-    GET_USER
+    GET_USER,
+    GET_ALL_USER,
 } from "../../action/MessageAction"
 
 const initialState = {
@@ -26,6 +27,10 @@ const initialState = {
     getUserResult: false,
     getUserLoading: false,
     getUserError: false,
+
+    getAllUserResult: false,
+    getAllUserLoading: false,
+    getAllUserError: false,
 
 }
 
@@ -70,6 +75,14 @@ const message = (state = initialState, action) => {
                 getUserResult: action.payload.data,
                 getUserLoading: action.payload.loading,
                 getUserError: action.payload.errormessage
+            }
+        case GET_ALL_USER:
+            // console.log("4. masuk reducer");
+            return {
+                ...state,
+                getAllUserResult: action.payload.data,
+                getAllUserLoading: action.payload.loading,
+                getAllUserError: action.payload.errormessage
             }
 
         default:

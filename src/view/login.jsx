@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux'
 import { addUser, getUser } from "../action/MessageAction";
 import axios from 'axios';
+import { nanoid } from 'nanoid';
 
 
 export const Login = () => {
@@ -15,7 +16,6 @@ export const Login = () => {
 
     let navigate = useNavigate();
     const dispatch = useDispatch();
-
 
     // useEffect(() => {
     //     dispatch(getUser("kRuqzk2ZTGMstuqaJTOdX8w3yt33"))
@@ -29,10 +29,11 @@ export const Login = () => {
             axios.get('http://localhost:3000/user?uid=' + user.uid)
                 .then(function (response) {
                     const status = "hey im new user in aplication"
+                    const pin = nanoid(7)
                     if (response.data.length == 1) {
                         sessionStorage.setItem("uidl", user.uid);
                     } else {
-                        dispatch(addUser({ uid: user.uid, name: user.displayName, email: user.email, photo: user.photoURL, status: status }))
+                        dispatch(addUser({ uid: user.uid, pin: pin, name: user.displayName, email: user.email, photo: user.photoURL, status: status, mykontak: [] }))
                     }
                     dispatch(getUser(user.uid))
                     // handle success
@@ -49,8 +50,6 @@ export const Login = () => {
 
         })
     }
-
-
 
     return (
         <>

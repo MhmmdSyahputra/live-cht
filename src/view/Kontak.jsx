@@ -1,20 +1,53 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { getUser } from "../action/MessageAction";
+import { getUser, getAllUser, addNewKontak } from "../action/MessageAction";
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import { useNavigate } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import Skeleton from '@mui/material/Skeleton';
 
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogTitle from '@mui/material/DialogTitle';
+
 export const Kontak = () => {
     const navigate = useNavigate()
     const dispatch = useDispatch();
-    const { getUserResult, getUserLoading, getUserError } = useSelector((state) => state.MessageReducer)
+    const { getUserResult, getUserLoading, getUserError, getAllUserResult } = useSelector((state) => state.MessageReducer)
+    const [nama, setNama] = useState();
+    const [pin, setPin] = useState();
+
+    const [open, setOpen] = React.useState(false);
+
+    const handleClickOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
 
     useEffect(() => {
         dispatch(getUser(localStorage.getItem("uidl")))
+        dispatch(getAllUser())
     }, [])
+
+    const simpanNewkontak = () => {
+        getAllUserResult.map((user) => {
+            if (pin == user.pin) {
+                dispatch(addNewKontak({ uid: user.uid, name: nama, pin: user.pin, email: user.email, photo: user.photo, status: user.status }))
+            }
+
+        })
+        setOpen(false);
+        setNama('')
+        setPin('')
+
+    }
 
     const back = () => {
         navigate('/')
@@ -39,8 +72,8 @@ export const Kontak = () => {
                         </Navbar>
 
 
-                        <div className='mt-5'>
-                            <div className="row mt-3 mb-2" style={{ cursor: 'pointer' }}>
+                        <div className='mt-5' >
+                            <div className="row mt-3 mb-2" onClick={handleClickOpen} style={{ cursor: 'pointer' }}>
                                 <div className="col">
                                     <div className="row">
                                         <div className="col-3" style={{ width: '100px' }}>
@@ -52,35 +85,73 @@ export const Kontak = () => {
                                     </div>
                                 </div>
                             </div>
+
+                            {/* add kontak pop up */}
+                            <Dialog open={open} onClose={handleClose}>
+                                <DialogTitle>Tambah Kontak Baru</DialogTitle>
+                                <DialogContent>
+                                    <div className="row">
+                                        <div className="col">
+                                            <TextField
+                                                autoFocus
+                                                margin="dense"
+                                                id="name"
+                                                value={nama}
+                                                onChange={(e) => setNama(e.target.value)}
+                                                autoComplete='off'
+                                                label="Name"
+                                                type="text"
+                                                fullWidth
+                                                variant="standard"
+                                            />
+                                        </div>
+                                        <div className="col">
+                                            <TextField
+                                                margin="dense"
+                                                id="pin"
+                                                value={pin}
+                                                onChange={(e) => setPin(e.target.value)}
+                                                label="Pin"
+                                                autoComplete='off'
+                                                type="text"
+                                                fullWidth
+                                                variant="standard"
+                                            />
+                                        </div>
+                                    </div>
+
+                                </DialogContent>
+                                <DialogActions>
+                                    <Button onClick={handleClose}>Cancel</Button>
+                                    <Button onClick={simpanNewkontak}>Save</Button>
+                                </DialogActions>
+                            </Dialog>
+
                         </div>
 
                         <div className='text-muted mt-4 text-start fs-5'>Daftar Kontak Saya</div>
                         {
                             getUserResult ? (
-                                getUserResult.map((user) => {
+                                getUserResult.map((user, index) => {
                                     return (
-                                        <div>
+                                        <div key={index}>
                                             {
                                                 user.mykontak.length > 0 ? (
                                                     user.mykontak.map((kontakme, index) => {
                                                         return (
+                                                            <div className="row mt-3 mb-2" key={index} style={{ cursor: 'pointer' }}>
+                                                                <div className="col">
+                                                                    <div className="row">
+                                                                        <div className="col-3" style={{ width: '100px' }}>
 
-                                                            <div className='mt-4'>
-
-                                                                <div className="row mt-3 mb-2" key={index} style={{ cursor: 'pointer' }}>
-                                                                    <div className="col">
-                                                                        <div className="row">
-                                                                            <div className="col-3" style={{ width: '100px' }}>
-
-                                                                                <img src={kontakme.photo} className="rounded-circle border border-white bg-light " width='55' alt="" />
+                                                                            <img src={kontakme.photo} className="rounded-circle border border-white bg-light " width='55' alt="" />
+                                                                        </div>
+                                                                        <div className="col m-auto text-start">
+                                                                            <label className='username fw-bold'>{kontakme.name}</label>
+                                                                            <div className='status'>
+                                                                                <label className='username fw-bold'>{kontakme.status} </label>
                                                                             </div>
-                                                                            <div className="col m-auto text-start">
-                                                                                <label className='username fw-bold'>{kontakme.name}</label>
-                                                                                <div className='status'>
-                                                                                    <label className='username fw-bold'>ada</label>
-                                                                                </div>
 
-                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>

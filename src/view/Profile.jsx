@@ -60,7 +60,7 @@ export const Profile = () => {
                                                 </div>
                                                 <div className="col">
                                                     <div className='text-muted fs-5'>Pin</div>
-                                                    <div className="col text-start fs-5">{data.uid}</div>
+                                                    <div className="col text-start fs-5">{data.pin}</div>
                                                 </div>
                                             </div>
                                         </div>
