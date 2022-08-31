@@ -196,7 +196,16 @@
       "email": "putramhmmd22@gmail.com",
       "photo": "https://lh3.googleusercontent.com/a-/AFdZucorDE0VXBOcEoWiyogMeWEu-1m3cMLz5cpMpzjHLQ=s96-c",
       "status": "hey im new user in aplication",
-      "mykontak": [],
+      "mykontak": [
+        {
+          "uid": "kRuqzk2ZTGMstuqaJTOdX8w3yt33",
+          "name": "wer",
+          "pin": "2dJd39d",
+          "email": "putra.cokers@gmail.com",
+          "photo": "https://lh3.googleusercontent.com/a-/AFdZuconsP-5Dio8TJdG-KSuitZb4vfUU0Xg972hQ2_D=s96-c",
+          "status": "hey im new user in aplication"
+        }
+      ],
       "id": 2
     }
   ]

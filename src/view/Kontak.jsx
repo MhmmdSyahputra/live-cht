@@ -6,6 +6,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import { useNavigate } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import Skeleton from '@mui/material/Skeleton';
+import swal from 'sweetalert';
+
 
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
@@ -37,17 +39,103 @@ export const Kontak = () => {
     }, [])
 
     const simpanNewkontak = () => {
-        getAllUserResult.map((user) => {
-            if (pin == user.pin) {
-                dispatch(addNewKontak({ uid: user.uid, name: nama, pin: user.pin, email: user.email, photo: user.photo, status: user.status }))
-            }
+        // getAllUserResult.map((user) => {
+        //     if (pin == user.pin) {
+        //         getUserResult.map((me) => {
+        //             if (pin !== me.pin) {
+        //                 if (me.mykontak.length > 0) {
+        //                     me.mykontak.map((myfriend) => {
+        //                         if (pin !== myfriend.pin) {
+        //                             dispatch(addNewKontak({ uid: user.uid, name: nama, pin: user.pin, email: user.email, photo: user.photo, status: user.status }))
+        //                         } else {
+        //                             swal({
+        //                                 title: "Akun Sudah ada",
+        //                                 text: "akun yang anda tambah sudah ada",
+        //                                 icon: "warning",
+        //                                 button: "Oke"
+        //                             })
+        //                             return false
+        //                         }
+        //                     })
+        //                 } else {
+        //                     dispatch(addNewKontak({ uid: user.uid, name: nama, pin: user.pin, email: user.email, photo: user.photo, status: user.status }))
+        //                 }
+        //             } else {
+        //                 swal({
+        //                     title: "Aneh",
+        //                     text: "Pin kau itu blokk!",
+        //                     icon: "warning",
+        //                     button: "Oke"
+        //                 })
+        //             }
+        //         })
+        //     } else {
+        //         // swal({
+        //         //     title: "Akun Tidak Ditemukan",
+        //         //     text: "Pin yang anda masukan salah!",
+        //         //     icon: "error",
+        //         //     button: "Oke"
+        //         // })
+        //     }
 
+
+        // })
+
+        getAllUserResult.map((alluser) => {
+            getUserResult.map((me) => {
+                // jika kontak saya tidak kosong
+                if (me.mykontak.length > 0) {
+                    me.mykontak.map((kontakme) => {
+                        console.log(kontakme.pin);
+                        // jika  pin input == pin yg ada 
+                        // dan pin input != mypin dan
+                        // pin != pin yg ada dikontakku
+                        //maka lakukan
+                        if (pin == alluser.pin & pin !== me.pin & pin !== kontakme.pin) {
+                            dispatch(addNewKontak({ uid: alluser.uid, name: nama, pin: alluser.pin, email: alluser.email, photo: alluser.photo, status: alluser.status }))
+                        } else {
+                            // jika tidak memenuhi berarti salah
+                            swal({
+                                title: "Akun Tidak Ditemukan",
+                                text: "Pin yang anda masukan salah!",
+                                icon: "error",
+                                button: "Oke"
+                            })
+                        }
+                    })
+
+                } else {
+                    // jika mykontak masik kosong maka hanya cek
+                    // pin == pin yg ada dan 
+                    // pin != pin saya
+                    // maka lakukan
+                    if (pin == alluser.pin & pin !== me.pin) {
+                        dispatch(addNewKontak({ uid: alluser.uid, name: nama, pin: alluser.pin, email: alluser.email, photo: alluser.photo, status: alluser.status }))
+                    } else {
+                        swal({
+                            title: "Akun Tidak Ditemukan",
+                            text: "Pin yang anda masukan salah!",
+                            icon: "error",
+                            button: "Oke"
+                        })
+                    }
+                }
+
+            })
         })
+
+
         setOpen(false);
         setNama('')
         setPin('')
 
     }
+
+    // useEffect(() => {
+    //     if (getAllUserResult) {
+
+    //     }
+    // }, [getAllUserResult, dispatch])
 
     const back = () => {
         navigate('/')

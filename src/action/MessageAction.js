@@ -1,5 +1,6 @@
 import axios from "axios";
 import { store } from '../index'
+import swal from 'sweetalert';
 
 export const GET_ALL_MESSAGE = "GET_ALL_MESSAGE"
 export const GET_ALL_MESSAGE_IN = "GET_ALL_MESSAGE_IN"
@@ -330,6 +331,12 @@ export const addNewKontak = (data) => {
             .then((response) => {
                 // console.log("3. berhasil dapet data", response.data);
                 //berhasil get api
+                swal({
+                    title: "Sukses",
+                    text: "Berhasil Ditambah Ke kontak",
+                    icon: "success",
+                    button: "Oke"
+                })
                 dispatch({
                     type: ADD_MESSAGE_IN,
                     payload: {
