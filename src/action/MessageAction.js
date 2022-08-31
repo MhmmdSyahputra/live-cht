@@ -80,7 +80,7 @@ export const getUser = (uid) => {
             timeout: 120000
         })
             .then((response) => {
-                console.log("3. berhasil dapet data", response.data);
+                // console.log("3. berhasil dapet data", response.data);
                 //berhasil get api
                 dispatch({
                     type: GET_USER,
@@ -92,7 +92,7 @@ export const getUser = (uid) => {
                 })
             })
             .catch((error) => {
-                console.log("3. gagal dapet data", error);
+                // console.log("3. gagal dapet data", error);
                 //gagal get api
                 dispatch({
                     type: GET_USER,

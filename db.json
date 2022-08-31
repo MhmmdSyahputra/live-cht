@@ -175,6 +175,17 @@
       "name": "mhd syahputra",
       "email": "putra.cokers@gmail.com",
       "photo": "https://lh3.googleusercontent.com/a-/AFdZuconsP-5Dio8TJdG-KSuitZb4vfUU0Xg972hQ2_D=s96-c",
+      "status":"hey im new user in aplication",
+      "mykontak":[
+        {
+          "uid": "0pEwj61Dx3gNhTYAVHgCftO6Ub73",
+          "name": "Muhammad Syahputra",
+          "email": "putramhmmd22@gmail.com",
+          "photo": "https://lh3.googleusercontent.com/a-/AFdZucorDE0VXBOcEoWiyogMeWEu-1m3cMLz5cpMpzjHLQ=s96-c",
+          "status":"hey im new user in aplication",
+          "id": 2
+        }
+      ],
       "id": 1
     },
     {
@@ -182,7 +193,10 @@
       "name": "Muhammad Syahputra",
       "email": "putramhmmd22@gmail.com",
       "photo": "https://lh3.googleusercontent.com/a-/AFdZucorDE0VXBOcEoWiyogMeWEu-1m3cMLz5cpMpzjHLQ=s96-c",
+      "status":"hey im new user in aplication",
+      "mykontak":[],
       "id": 2
     }
   ]
+  
 }

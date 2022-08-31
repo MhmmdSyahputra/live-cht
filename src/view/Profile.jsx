@@ -1,17 +1,26 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import { store } from '../index'
-import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux'
+import { getUser } from "../action/MessageAction";
 
 
 export const Profile = () => {
+    const dispatch = useDispatch();
     const { getUserResult, getUserLoading, getUserError } = useSelector((state) => state.MessageReducer)
     const navigate = useNavigate()
+
     const back = () => {
         navigate('/')
     }
+
+    useEffect(() => {
+        dispatch(getUser(localStorage.getItem("uidl")))
+    }, [])
+
+
     return (
         <>
             <div className="container">
@@ -34,7 +43,7 @@ export const Profile = () => {
                                 getUserResult.map((data, index) => {
                                     return (
                                         <div key={index}>
-                                            <img src={data.photo} width='200' height='200' className='rounded-circle mb-5 mt-5' alt="" />
+                                            <img src={data.photo} width='200' height='200' className='rounded-circle mb-5 mt-5' alt="Profile" />
                                             <div className="row text-start mb-5 ms-4">
                                                 <div className="col-1" >
                                                     <i className="fa-solid fa-user fs-2"></i>
@@ -60,10 +69,6 @@ export const Profile = () => {
                                 })
                             ) : ''
                         }
-
-
-
-
                     </div>
                 </div>
             </div>

@@ -12,10 +12,10 @@ import axios from 'axios';
 
 export const Login = () => {
     const [users, setUsers] = useState("");
+
     let navigate = useNavigate();
     const dispatch = useDispatch();
 
-    const { getUserResult, getUserLoading, getUserError } = useSelector((state) => state.MessageReducer)
 
     // useEffect(() => {
     //     dispatch(getUser("kRuqzk2ZTGMstuqaJTOdX8w3yt33"))
@@ -28,14 +28,15 @@ export const Login = () => {
 
             axios.get('http://localhost:3000/user?uid=' + user.uid)
                 .then(function (response) {
+                    const status = "hey im new user in aplication"
                     if (response.data.length == 1) {
                         sessionStorage.setItem("uidl", user.uid);
                     } else {
-                        dispatch(addUser({ uid: user.uid, name: user.displayName, email: user.email, photo: user.photoURL }))
+                        dispatch(addUser({ uid: user.uid, name: user.displayName, email: user.email, photo: user.photoURL, status: status }))
                     }
                     dispatch(getUser(user.uid))
                     // handle success
-                    console.log(response.data.length);
+                    // console.log(response.data.length);
                 })
                 .catch(function (error) {
                     // handle error

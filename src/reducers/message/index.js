@@ -64,7 +64,7 @@ const message = (state = initialState, action) => {
                 addUserError: action.payload.errormessage
             }
         case GET_USER:
-            console.log("4. masuk reducer");
+            // console.log("4. masuk reducer");
             return {
                 ...state,
                 getUserResult: action.payload.data,

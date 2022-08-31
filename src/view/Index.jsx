@@ -38,7 +38,7 @@ export const HomeCht = () => {
     const logout = () => {
         auth.signOut().then(() => {
             localStorage.removeItem("uidl")
-            navigate('/Login?p=q');
+            navigate('/login');
         })
 
     }
@@ -47,7 +47,7 @@ export const HomeCht = () => {
         <>
             {
                 localStorage.getItem("uidl") === null ? (
-                    navigate('/Login')
+                    navigate('/login')
                 ) : (
                     <div className="container">
                         <div className="row d-flex justify-content-center">
@@ -78,10 +78,7 @@ export const HomeCht = () => {
                                                 }}
                                             >
                                                 <MenuItem className='p-3 pe-5' onClick={handleClose}>
-                                                    Add Kontak
-                                                </MenuItem>
-                                                <MenuItem className='p-3 pe-5' onClick={handleClose}>
-                                                    Lihat Kontak
+                                                    <Link to='/kontak' className='text-decoration-none text-dark'>Lihat Kontak</Link>
                                                 </MenuItem>
 
                                                 <MenuItem className='p-3 pe-5' onClick={handleClose}>
