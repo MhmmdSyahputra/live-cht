@@ -5,6 +5,7 @@ import {
     ADD_USER,
     GET_USER,
     GET_ALL_USER,
+    IN_ROOM_CHT,
 } from "../../action/MessageAction"
 
 const initialState = {
@@ -31,6 +32,10 @@ const initialState = {
     getAllUserResult: false,
     getAllUserLoading: false,
     getAllUserError: false,
+
+    inRoomchtResult: false,
+    inRoomchtLoading: false,
+    inRoomchtError: false,
 
 }
 
@@ -83,6 +88,14 @@ const message = (state = initialState, action) => {
                 getAllUserResult: action.payload.data,
                 getAllUserLoading: action.payload.loading,
                 getAllUserError: action.payload.errormessage
+            }
+        case IN_ROOM_CHT:
+            // console.log("4. masuk reducer");
+            return {
+                ...state,
+                inroomchtResult: action.payload.data,
+                inroomchtLoading: action.payload.loading,
+                inroomchtError: action.payload.errormessage
             }
 
         default:
