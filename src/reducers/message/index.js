@@ -5,7 +5,7 @@ import {
     ADD_USER,
     GET_USER,
     GET_ALL_USER,
-    IN_ROOM_CHT,
+    ADD_NEW_ROOM,
 } from "../../action/MessageAction"
 
 const initialState = {
@@ -33,10 +33,12 @@ const initialState = {
     getAllUserLoading: false,
     getAllUserError: false,
 
-    inRoomchtResult: false,
-    inRoomchtLoading: false,
-    inRoomchtError: false,
+    addNewRoomResult: false,
+    addNewRoomLoading: false,
+    addNewRoomError: false,
 
+    
+    
 }
 
 const message = (state = initialState, action) => {
@@ -89,14 +91,16 @@ const message = (state = initialState, action) => {
                 getAllUserLoading: action.payload.loading,
                 getAllUserError: action.payload.errormessage
             }
-        case IN_ROOM_CHT:
+
+        case ADD_NEW_ROOM:
             // console.log("4. masuk reducer");
             return {
                 ...state,
-                inroomchtResult: action.payload.data,
-                inroomchtLoading: action.payload.loading,
-                inroomchtError: action.payload.errormessage
+                addNewRoomResult: action.payload.data,
+                addNewRoomLoading: action.payload.loading,
+                addNewRoomError: action.payload.errormessage
             }
+       
 
         default:
             return state;

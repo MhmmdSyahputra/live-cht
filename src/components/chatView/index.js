@@ -45,11 +45,11 @@ export const SingleCht = () => {
                         return (
                             allPesanIn.allmessage.map((allPesanIn2, index) => {
                                 return (
-                                    <div style={{ width: '70%' }} className={allPesanIn2.uid === localStorage.getItem("uid") ? 'ms-auto' : ''} key={index}>
+                                    <div style={{ width: '70%' }} className={allPesanIn2.uid === localStorage.getItem("uidl") ? 'ms-auto' : ''} key={index}>
                                         <div className='bubble-chat bg-light m-2 p-3 text-start text-dark shadow cht-right'
-                                            style={{ clear: 'both', float: allPesanIn2.uid === localStorage.getItem("uid") ? 'right' : 'left', borderRadius: '20px' }}>
+                                            style={{ clear: 'both', float: allPesanIn2.uid === localStorage.getItem("uidl") ? 'right' : 'left', borderRadius: '20px' }}>
 
-                                            <h6 className={'text-muted ' + (allPesanIn2.uid === localStorage.getItem("uid") ? 'text-end' : 'text-start')}>
+                                            <h6 className={'text-muted ' + (allPesanIn2.uid === localStorage.getItem("uidl") ? 'text-end' : 'text-start')}>
                                                 {allPesanIn2.nama}
                                             </h6>
                                             <div>

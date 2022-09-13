@@ -10,7 +10,7 @@ export const ADD_MESSAGE_IN = "ADD_MESSAGE_IN";
 export const GET_USER = "GET_USER";
 export const GET_ALL_USER = "GET_ALL_USER";
 export const ADD_USER = "ADD_USER";
-export const IN_ROOM_CHT = "IN_ROOM_CHT";
+export const ADD_NEW_ROOM = "ADD_NEW_ROOM";
 
 // local
 const url = "http://localhost:3000/";
@@ -201,55 +201,55 @@ export const getAllMessage = () => {
   };
 };
 
-export const inRoomcht = (nameroom) => {
-  // console.log("2. Masuk Action");
-  return (dispatch) => {
-    // loading
-    dispatch({
-      type: IN_ROOM_CHT,
-      payload: {
-        loading: true,
-        data: false,
-        errormessage: false,
-      },
-    });
-
-    //get api
-    axios({
-      method: "GET",
-      url: url + "room?nama=" + nameroom,
-      timeout: 120000,
-    })
-      .then((response) => {
-        // console.log("3. berhasil dapet data", response.data);
-        //berhasil get api
-        dispatch({
-          type: IN_ROOM_CHT,
-          payload: {
-            loading: false,
-            data: response.data,
-            errormessage: false,
-          },
-        });
-        const id = response.data[0].id;
-        const navigate = useNavigate();
-        navigate("cht/" + id);
-        //    console.log(response.data[0].id);
-      })
-      .catch((error) => {
-        // console.log("3. gagal dapet data", error);
-        //gagal get api
-        dispatch({
-          type: IN_ROOM_CHT,
-          payload: {
-            loading: false,
-            data: false,
-            errormessage: error.message,
-          },
-        });
+export const addNewRoom = (data) => {
+ 
+    return (dispatch) => {
+       
+      // loading
+      dispatch({
+        type: ADD_NEW_ROOM,
+        payload: {
+          loading: true,
+          data: false,
+          errormessage: false,
+        },
       });
+      //get api
+      axios({
+        method: "POST",
+        url: url + "room/",
+        timeout: 120000,
+        data: data,
+      })
+        .then((response) => {
+          // console.log("3. berhasil dapet data", response.data);
+          //berhasil get api
+          dispatch({
+            type: ADD_NEW_ROOM,
+            payload: {
+              loading: false,
+              data: response.data,
+              errormessage: false,
+            },
+          });
+            
+            
+        })
+        .catch((error) => {
+          // console.log("3. gagal dapet data", error);
+          //gagal get api
+          dispatch({
+            type: ADD_NEW_ROOM,
+            payload: {
+              loading: false,
+              data: false,
+              errormessage: error.message,
+            },
+          });
+        });
+    };
   };
-};
+
 
 export const getAllPesanIn = (id) => {
   // console.log("2. Masuk Action");

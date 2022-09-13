@@ -33,7 +33,7 @@ export const Login = () => {
                     if (response.data.length == 1) {
                         sessionStorage.setItem("uidl", user.uid);
                     } else {
-                        dispatch(addUser({ uid: user.uid, pin: pin, name: user.displayName, email: user.email, photo: user.photoURL, status: status, mykontak: [] }))
+                        dispatch(addUser({ id: user.uid, pin: pin, name: user.displayName, email: user.email, photo: user.photoURL, status: status, mykontak: [] }))
                     }
                     dispatch(getUser(user.uid))
                     // handle success

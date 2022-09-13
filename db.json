@@ -1,190 +1,103 @@
 {
   "room": [
     {
-      "nama": "Info Loker",
-      "id": 1,
+      "nama": "pt",
+      "member": "bapMKL8 and 1MSCxRD",
       "allmessage": [
-        {
-          "uid": "RsCpSRI9XS2ur-tvn8Ye9",
-          "nama": "Anonymous",
-          "pesan": "wd",
-          "time": "11:32"
-        },
-        {
-          "uid": "RsCpSRI9XS2ur-tvn8Ye9",
-          "nama": "Anonymous",
-          "pesan": "abcdefghijkl mnopq r",
-          "time": "12:27"
-        },
-        {
-          "uid": "RsCpSRI9XS2ur-tvn8Ye9",
-          "nama": "Anonymous",
-          "pesan": "abcdefghijkl mnopq r1",
-          "time": "12:28"
-        },
-        {
-          "uid": "RsCpSRI9XS2ur-tvn8Ye9",
-          "nama": "Anonymous",
-          "pesan": "halo semua apa kabar nama saya putra salam kenal",
-          "time": "12:28"
-        },
-        {
-          "uid": "RsCpSRI9XS2ur-tvn8Ye9",
-          "nama": "Anonymous",
-          "pesan": "halo guys",
-          "time": "12:31"
-        },
-        {
-          "uid": "JP6ps2vaExu6ELQkgIlZg",
-          "nama": "Anonymous",
-          "pesan": "halo",
-          "time": "12:32"
-        },
-        {
-          "uid": "JP6ps2vaExu6ELQkgIlZg",
-          "nama": "Anonymous",
-          "pesan": "halo semua nama saya putra saya adalah seorang web developer saya sedang mencari loker web dev lebih tepat nya sebagai frontend developer terimakasih",
-          "time": "12:33"
-        },
-        {
-          "uid": "JP6ps2vaExu6ELQkgIlZg",
-          "nama": "Anonymous",
-          "pesan": "p",
-          "time": "12:46"
-        },
-        {
-          "uid": "JP6ps2vaExu6ELQkgIlZg",
-          "nama": "Anonymous",
-          "pesan": "s",
-          "time": "12:50"
-        },
-        {
-          "uid": "JP6ps2vaExu6ELQkgIlZg",
-          "nama": "Anonymous",
-          "pesan": "wfuhwuiehf iwuehfuew iwhefuewf iwefuohw fiwefvearjf iuwefhoiwewgfvui wuoefgiug iuwegf weigfi",
-          "time": "12:59"
-        },
-        {
-          "uid": "h1sZdkuPVC04xh7r64NoN",
-          "nama": "Anonymous",
-          "pesan": "ada apa nich",
-          "time": "13:12"
-        },
-        {
-          "uid": "JP6ps2vaExu6ELQkgIlZg",
-          "nama": "Anonymous",
-          "pesan": "gdk",
-          "time": "13:12"
-        },
-        {
-          "uid": "JP6ps2vaExu6ELQkgIlZg",
-          "nama": "Anonymous",
-          "pesan": "s",
-          "time": "13:13"
-        },
-        {
-          "uid": "h1sZdkuPVC04xh7r64NoN",
-          "nama": "Anonymous",
-          "pesan": "p",
-          "time": "13:15"
-        },
-        {
-          "uid": "h1sZdkuPVC04xh7r64NoN",
-          "nama": "Anonymous",
-          "pesan": "q",
-          "time": "13:17"
-        },
-        {
-          "uid": "h1sZdkuPVC04xh7r64NoN",
-          "nama": "Anonymous",
-          "pesan": "r",
-          "time": "13:20"
-        },
-        {
-          "uid": "h1sZdkuPVC04xh7r64NoN",
-          "nama": "Anonymous",
-          "pesan": "t",
-          "time": "13:20"
-        },
-        {
-          "uid": "h1sZdkuPVC04xh7r64NoN",
-          "nama": "Anonymous",
-          "pesan": "ce",
-          "time": "13:22"
-        },
-        {
-          "uid": "hprjlmkxlMj4_sPwxEmV1",
-          "nama": "Anonymous",
-          "pesan": "w",
-          "time": "08:20"
-        },
-        {
-          "uid": "JP6ps2vaExu6ELQkgIlZg",
-          "nama": "Anonymous",
-          "pesan": "halo",
-          "time": "17:42"
-        }
-      ]
-    },
-    {
-      "nama": "Anak IT",
-      "id": 2,
-      "allmessage": [
-        {
-          "uid": "RsCpSRI9XS2ur-tvn8Ye9",
-          "nama": "Anonymous",
-          "pesan": "cek",
-          "time": "02:00"
-        },
-        {
-          "uid": "RsCpSRI9XS2ur-tvn8Ye9",
-          "nama": "Anonymous",
-          "pesan": "halo",
-          "time": "11:35"
-        },
-        {
-          "uid": "RsCpSRI9XS2ur-tvn8Ye9",
-          "nama": "Anonymous",
-          "pesan": "hai",
-          "time": "12:21"
-        },
-        {
-          "uid": "JP6ps2vaExu6ELQkgIlZg",
-          "nama": "Anonymous",
-          "pesan": "halo",
-          "time": "13:04"
-        }
-      ]
-    },
-    {
-      "nama": "Tes",
-      "id": 3,
-      "allmessage": [
-        {
-          "uid": "RsCpSRI9XS2ur-tvn8Ye9",
-          "nama": "Anonymous",
-          "pesan": "intro",
-          "time": "02:01"
-        }
-      ]
-    },
-    {
-      "nama": "2dJd39d and 1MSCxRD",
-      "id": 4,
-      "allmessage": [
-        {
-          "uid": "RsCpSRI9XS2ur-tvn8Ye9",
-          "nama": "Anonymous",
-          "pesan": "intro",
-          "time": "02:01"
-        },
         {
           "uid": "i2mZ75MnGSk79_GYTpPK1",
           "nama": "Anonymous",
           "pesan": "halo",
-          "time": "11:06"
+          "time": "23:50"
+        },
+        {
+          "uid": "i2mZ75MnGSk79_GYTpPK1",
+          "nama": "Anonymous",
+          "pesan": "p",
+          "time": "23:53"
+        },
+        {
+          "uid": "qj9CvwkCO1ms2g7hDMEh5",
+          "nama": "Anonymous",
+          "pesan": "halo",
+          "time": "23:55"
         }
-      ]
+      ],
+      "id": 1
+    },
+    {
+      "nama": "dn",
+      "member": "2dJd39d and bapMKL8",
+      "allmessage": [
+        {
+          "uid": "i2mZ75MnGSk79_GYTpPK1",
+          "nama": "Anonymous",
+          "pesan": "halo",
+          "time": "11:24"
+        },
+        {
+          "uid": "i2mZ75MnGSk79_GYTpPK1",
+          "nama": "Anonymous",
+          "pesan": "p",
+          "time": "11:27"
+        },
+        {
+          "uid": "i2mZ75MnGSk79_GYTpPK1",
+          "nama": "Anonymous",
+          "pesan": "p",
+          "time": "11:30"
+        },
+        {
+          "uid": "i2mZ75MnGSk79_GYTpPK1",
+          "nama": "Anonymous",
+          "pesan": "p",
+          "time": "11:30"
+        },
+        {
+          "uid": "i2mZ75MnGSk79_GYTpPK1",
+          "nama": "Anonymous",
+          "pesan": "p",
+          "time": "11:31"
+        },
+        {
+          "uid": "i2mZ75MnGSk79_GYTpPK1",
+          "nama": "Anonymous",
+          "pesan": "a",
+          "time": "11:32"
+        },
+        {
+          "uid": "kRuqzk2ZTGMstuqaJTOdX8w3yt33",
+          "nama": "Anonymous",
+          "pesan": "as",
+          "time": "11:33"
+        },
+        {
+          "uid": "kRuqzk2ZTGMstuqaJTOdX8w3yt33",
+          "nama": "Anonymous",
+          "pesan": "f",
+          "time": "11:36"
+        },
+        {
+          "uid": "7bL6n6pTvYM0ZcBYuyK6fw5va883",
+          "nama": "Anonymous",
+          "pesan": "hlo",
+          "time": "11:36"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "nama": "wer",
+      "member": "1MSCxRD and 2dJd39d",
+      "allmessage": [
+        {
+          "uid": "i2mZ75MnGSk79_GYTpPK1",
+          "nama": "Anonymous",
+          "pesan": "a",
+          "time": "10:31"
+        }
+      ],
+      "id": 3
     }
   ],
   "user": [
@@ -202,6 +115,14 @@
           "pin": "1MSCxRD",
           "email": "putramhmmd22@gmail.com",
           "photo": "https://lh3.googleusercontent.com/a-/AFdZucorDE0VXBOcEoWiyogMeWEu-1m3cMLz5cpMpzjHLQ=s96-c",
+          "status": "hey im new user in aplication"
+        },
+        {
+          "uid": "7bL6n6pTvYM0ZcBYuyK6fw5va883",
+          "name": "dn",
+          "pin": "bapMKL8",
+          "email": "dnassassint@gmail.com",
+          "photo": "https://lh3.googleusercontent.com/a/AItbvmmf6WLrC8vo9eUy9cj7bR55o4KlG-oriiHLqB8=s96-c",
           "status": "hey im new user in aplication"
         }
       ],
@@ -225,6 +146,25 @@
         }
       ],
       "id": 2
+    },
+    {
+      "uid": "7bL6n6pTvYM0ZcBYuyK6fw5va883",
+      "pin": "bapMKL8",
+      "name": "Dn Assassint",
+      "email": "dnassassint@gmail.com",
+      "photo": "https://lh3.googleusercontent.com/a/AItbvmmf6WLrC8vo9eUy9cj7bR55o4KlG-oriiHLqB8=s96-c",
+      "status": "hey im new user in aplication",
+      "mykontak": [
+        {
+          "uid": "0pEwj61Dx3gNhTYAVHgCftO6Ub73",
+          "name": "pt",
+          "pin": "1MSCxRD",
+          "email": "putramhmmd22@gmail.com",
+          "photo": "https://lh3.googleusercontent.com/a-/AFdZucorDE0VXBOcEoWiyogMeWEu-1m3cMLz5cpMpzjHLQ=s96-c",
+          "status": "hey im new user in aplication"
+        }
+      ],
+      "id": 3
     }
   ]
 }

@@ -15,7 +15,7 @@ export const PersonalChat = () => {
     const dispatch = useDispatch();
 
     // jika uid sudah ada di local storage maka pakai uid itu jika belum ada maka create new uid
-    const [uid, setUid] = useState(localStorage.getItem("uid") !== null ? localStorage.getItem("uid") : nanoid())
+    const [uid, setUid] = useState(localStorage.getItem("uidl"))
 
     const [nama, setNama] = useState("Anonymous")
     const [pesan, setPesan] = useState("")
@@ -34,9 +34,7 @@ export const PersonalChat = () => {
     const sendmessage = (e) => {
         e.preventDefault();
         // jika localStorage uid masih kosong maka masukkan new id kelocalstorage
-        if (localStorage.getItem("uid") == null) {
-            localStorage.setItem("uid", uid);
-        }
+        
         dispatch(sendMessage({ uid: uid, nama: nama, pesan: pesan, time: time }))
     }
     useEffect(() => {

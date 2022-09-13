@@ -7,6 +7,7 @@ import {
   getAllUser,
   getAllMessage,
   inRoomcht,
+  addNewRoom,
 } from "../../action/MessageAction";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -20,7 +21,6 @@ export const MyKontak = () => {
     getUserError,
     getAllUserResult,
     getAllMessageResult,
-    inRoomchtResult,
   } = useSelector((state) => state.MessageReducer);
   const [nama, setNama] = useState();
   const [pin, setPin] = useState();
@@ -31,22 +31,23 @@ export const MyKontak = () => {
     dispatch(getAllMessage());
   }, []);
 
-  const inCht = (friendpin, mypin) => {
-    getAllMessageResult.map((room) => {
-      if (room.nama == mypin + " and " + friendpin) {
-        axios({
-          method: "get",
-          url: "http://localhost:3000/room?nama=" + mypin + " and " + friendpin,
-          
-        }).then(function (response) {
-            navigate('/cht/'+response.data[0].id)
-          console.log(response.data[0].id);
-        });
-       
-      } else {
-        console.log("gadak");
-      }
-    });
+  const inCht = (friendpin, mypin, namefriend) => {
+    axios
+      .get("http://localhost:3000/room?member=" + mypin + " and " + friendpin)
+      .then(function (response) {
+        if (response.data.length == 1) {
+          navigate("/cht/" + response.data[0].id);
+          // navigate("/cht/" + response.data[0].id);
+        } else {
+          dispatch(
+            addNewRoom({
+              nama: namefriend,
+              member: mypin + " and " + friendpin,
+              allmessage: [],
+            })
+          );
+        }
+      });
   };
 
   return (
@@ -62,7 +63,7 @@ export const MyKontak = () => {
                       className="row mt-3 mb-2"
                       key={index}
                       style={{ cursor: "pointer" }}
-                      onClick={() => inCht(kontakme.pin, user.pin)}
+                      onClick={() => inCht(kontakme.pin, user.pin, kontakme.name)}
                     >
                       <div className="col">
                         <div className="row">
